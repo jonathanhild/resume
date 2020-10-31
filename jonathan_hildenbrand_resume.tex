@@ -22,6 +22,9 @@
 \usepackage{anyfontsize}
 \usepackage{xcolor}
 \usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
 
 %-------------------------------------------------- SETTINGS HERE --------------------------------------------------
 % Header settings
@@ -37,7 +40,6 @@
 \def \linkedintext {jonathanh3}
 
 \def \phoneicon {\faPhone}
-\def \phonelink {tel:+1971-409-0695}
 \def \phonetext {+1-971-409-0695}
 
 \def \emailicon {\faEnvelope}
@@ -62,16 +64,17 @@
 \definecolor{Green}{HTML}{a0d468}
 \definecolor{Red}{HTML}{ed5565}
 \definecolor{Blue}{HTML}{4fc1e9}
-\definecolor{Grey}{HTML}{888888}
+\definecolor{Copper}{HTML}{9d8375}
 \definecolor{accent}{HTML}{666666}
 \definecolor{links}{HTML}{696969}
+\definecolor{subtle}{HTML}{c3c3c3}
 
 %------------------------------------------------------------------------------------------------------------------- 
 
 % Defines to make listing easier
-\def \location {\locationicon \hspace{3pt}{\locationtext}}
-\def \target {\targeticon \hspace{3pt}{\targettext}}
-\def \phone {\phoneicon \hspace{3pt}\href{\phonelink}{\underline{\phonetext}}}
+\def \location {\locationicon \hspace{3pt}{\color{links}\locationtext}}
+\def \target {\targeticon \hspace{3pt}{\color{links}\targettext}}
+\def \phone {\phoneicon \hspace{3pt}{\color{links}{\phonetext}}}
 \def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\underline{\linkedintext}}}
 \def \email {\emailicon \hspace{3pt}\href{\emaillink}{\underline{\emailtext}}}
 \def \github {\githubicon \hspace{3pt}\href{\githublink}{\underline{\githubtext}}}
@@ -110,7 +113,7 @@
 }
 
 \newcommand{\education}[2]{\vspace{6pt}
-  \colorbox{Grey}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
+  \colorbox{Copper}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
 }
 
 % Entry start and end, for spacing
@@ -128,6 +131,8 @@
     {#1 \vspace{-2pt}}
   }
 }
+
+\newcommand{\repo}[2]{\href{#1}{\underline{#2}}}
 
 % Entry with title, subheading, date(s), and location
 \newcommand{\resumeEntryTSDL}[4]{
@@ -154,10 +159,11 @@
       {\small{\textbf{#1 }}} & {\small{#2}}
       \end{tabular}\vspace{-6pt}
 }
-%
-%\begin{tabular}{ c c }
-%      {\small{\textbf{#1 }}} & {\small{#2}}
-%      \end{tabular}
+
+\newcommand{\tag}[1]{%
+  \tikzmarknode[fill=white,fill
+opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text height=1.5ex,text depth=.25ex, text opacity=1]{test}{\small{#1}}
+}
 
 % Double column header
 \newcommand{\doublecol}[6]{
@@ -209,24 +215,24 @@
 
   \resumeEntryStart
     \resumeEntryTD
-      {Recommender System for Books using NLP}{\href{https://github.com/jonathanhild/powellsbooks}{\underline{https://github.com/jonathanhild/powellsbooks}}}
+      {Recommender System for Books using NLP}{\repo{https://github.com/jonathanhild/powellsbooks}{https://github.com/jonathanhild/powellsbooks}}
     \resumeItemListStart
-      \resumeItem {This project makes use of Python for a web scraping tool, SQLite database, ML algorithm, and hosted with Streamlit. The model will use NLP techniques to create a book recommender system using Powell's Books' Staff Picks. \textit{This is an independent project not affiliated with Powell’s Books.}}
+      \resumeItem {\tag{In Process} This project includes a web scraping tool, SQLite database, and Streamlit web interface built in Python. The recommender algorithm uses NLP techniques to give recommendations based on Powell's Books' Staff Picks. \textit{This is an independent project not affiliated with Powell’s Books.}}
     \resumeItemListEnd
   \resumeEntryTD
-      {GeoGuessr Maps}{\href{https://github.com/jonathanhild/geoguessrmaps}{\underline{https://github.com/jonathanhild/geoguessrmaps}}}
+      {GeoGuessr Maps}{\repo{https://github.com/jonathanhild/geoguessrmaps}{https://github.com/jonathanhild/geoguessrmaps}}
     \resumeItemListStart
-      \resumeItem {Scripting with Python and Google Maps API to produce latitude-longitude coordinates for Map Maker in GeoGuessr.com.}
+      \resumeItem {Creating latitude/longitude coordinates sets made with Python and Google Maps API for Map Maker in \href{https://www.geoguessr.com}{\underline{GeoGuessr.com}}.}
     \resumeItemListEnd
   \resumeEntryEnd
 
 %-------------------------------------------------- SKILLS --------------------------------------------------
 \skills{\faGears}{Skills}
  \resumeEntryStart
-  \resumeEntryS{Data Science} {Data Cleaning \& ETL, ~ Machine Learning, ~ Technical Communication, ~ Accounting, ~ Project Management}
-  \resumeEntryS{Programming Languages} {Python,~ SQL, ~ Regex, ~ HTML/CSS/JS, ~ C/C++, ~ VBA}
-  \resumeEntryS{Tools} {Anaconda, ~ PostgreSQL, ~ SQL Server, ~ SQLite, ~ SSMS, ~ Git, ~ Excel}
-  \resumeEntryS{Information Technology} {Jupyter, ~ Anaconda, ~ PostgreSQL, ~ SQL Server, ~ SQLite, ~ Git, ~ Excel}
+  \resumeEntryS{Data Science} {\tag{Data Cleaning \& ETL}\tag{Machine Learning}\tag{ Technical Communication}\tag{Accounting}\tag{Project Management}}
+  \resumeEntryS{Programming Languages} {\tag{Python}\tag{T-SQL}\tag{Regex}\tag{HTML / CSS / JS}\tag{C / C++}\tag{VBA}}
+  \resumeEntryS{Tools} {\tag{Anaconda}\tag{PostgreSQL}\tag{SQL Server}\tag{SQLite}\tag{SSMS}\tag{Git}\tag{Excel}}
+  \resumeEntryS{Information Technology} {\tag{Database Admin}\tag{Ubuntu 16.04+}\tag{Windows Server Admin}\tag{Dynamics NAV}}
 
  \resumeEntryEnd
  
@@ -272,8 +278,8 @@
   
   \resumeEntryStart
     \resumeEntryTSDL
-      {QA/R\&D Technician}{Aug 2010 -- Oct 2011}
-      {Beaverton Foods}{Portland, OR, USA}
+      {QA/R\&D Technician}{Apr 2008 -- Aug 2010}
+      {Beaverton Foods}{Hillsboro, OR, USA}
     \resumeItemListStart
       \resumeItem {Food safety and quality assurance lab analysis.}
       \resumeItem {Product development of mustards, sauces and condiments.}
@@ -282,8 +288,8 @@
   
   \resumeEntryStart
     \resumeEntryTSDL
-      {QA Projects Leader}{Aug 2010 -- Oct 2011}
-      {Lactalis American Group}{Portland, OR, USA}
+      {QA Projects Leader}{May 2006 -- Aug 2006}
+      {Lactalis American Group}{Nampa, ID, USA}
     \resumeItemListStart
       \resumeItem {Statistical analysis of processing data to control weight variances in the mozzarella line.}
     \resumeItemListEnd
@@ -291,13 +297,12 @@
   
   \resumeEntryStart
     \resumeEntryTSDL
-      {Laboratory Assistant}{Aug 2010 -- Oct 2011}
-      {University of Idaho}{Portland, OR, USA}
+      {Laboratory Assistant}{May 2005 -- May 2006}
+      {University of Idaho}{Moscow, ID, USA}
     \resumeItemListStart
       \resumeItem {Research project in size exclusion chromatography analysis of starches in Teff.}
     \resumeItemListEnd
   \resumeEntryEnd
-
 
 %-------------------------------------------------- EDUCATION --------------------------------------------------
 \education{\faGraduationCap}{Education}
@@ -307,14 +312,15 @@
       {University of Washington}{Summer 2020 -- Present}
       {Certificate in Data Science}{Online}
     \resumeEntryTSDL
+      {Dataquest.io}{2020}
+      {Data Scientist / Data Engineer / Data Analyst}{Online}
+    \resumeEntryTSDL
       {Portland Community College}{Spring 2015 -- Fall 2015}
       {Courses in Computer Science I/II}{Portland, OR}
     \resumeEntryTSDL
       {University of Idaho}{Fall 2003 -- Spring 2007}
-      {BSFS in Food Science}{Portland, OR}
-    \resumeEntryTSDL
-      {Additional Certifications}{}
-      {Dataquest.io Data Analyst in Python}{Online}
+      {BSFS in Food Science \& Toxicology}{Portland, OR}
+    
   \resumeEntryEnd
   
   \bigskip 
