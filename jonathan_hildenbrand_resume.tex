@@ -1,15 +1,15 @@
-%-------------------------------------
+%-----------------------------------------------------------------------------
 % LaTeX Resume for Data Science & Software Developer
 % Author : Jonathan Hildenbrand
 % License : MIT
-%-------------------------------------
+%-----------------------------------------------------------------------------
 
 \documentclass[letterpaper,12pt]{article}[leftmargin=*]
 
 \usepackage[empty]{fullpage}
 \usepackage{enumitem}
 \usepackage{ifxetex}
-\ifxetex
+\if{xetex}
   \usepackage{fontspec}
   \usepackage[xetex]{hyperref}
 \else
@@ -25,39 +25,39 @@
 \usepackage{tikz}
 \usetikzlibrary{tikzmark}
 
-
-%-------------------------------------------------- SETTINGS HERE --------------------------------------------------
+% SETTINGS
+%-----------------------------------------------------------------------------
 % Header settings
-\def \fullname {Jonathan Hildenbrand}
-\def \subtitle {Data Scientist \& Software Developer}
+\def\fullname{Jonathan Hildenbrand}
+\def\subtitle{Data Scientist \& Software Developer}
 
-\def \githubicon {\faGithub}
-\def \githublink {https://github.com/jonathanhild}
-\def \githubtext {jonathanhild}
+\def\githubicon{\faGithub}
+\def\githublink{https://github.com/jonathanhild}
+\def\githubtext{jonathanhild}
 
-\def \linkedinicon {\faLinkedin}
-\def \linkedinlink {https://linkedin.com/in/jonathanh3}
-\def \linkedintext {jonathanh3}
+\def\linkedinicon{\faLinkedin}
+\def\linkedinlink{https://linkedin.com/in/jonathanh3}
+\def\linkedintext{jonathanh3}
 
-\def \phoneicon {\faPhone}
-\def \phonetext {+1-971-409-0695}
+\def\phoneicon{\faPhone}
+\def\phonetext{+1-971-409-0695}
 
-\def \emailicon {\faEnvelope}
-\def \emaillink {mailto:jonathan.hildenbrand+resume@gmail.com}
-\def \emailtext {jonathan.hildenbrand@gmail.com}
+\def\emailicon{\faEnvelope}
+\def\emaillink{mailto:jonathan.hildenbrand+resume@gmail.com}
+\def\emailtext{jonathan.hildenbrand@gmail.com}
 
-\def \locationicon {\faMapMarker}
-\def \locationtext {Portland, Oregon}
+\def\locationicon{\faMapMarker}
+\def\locationtext{Portland, Oregon}
 
-\def \targeticon {\faBinoculars}
-\def \targettext {Local, Remote WFH \& Relocation}
+\def\targeticon{\faBinoculars}
+\def\targettext{Local, Remote WFH \& Relocation}
 
-\def \headertype {\doublecol} % \singlecol or \doublecol
+\def\headertype{\doublecol} % \singlecol or \doublecol
 
 % Misc settings
-\def \entryspacing {-0pt}
+\def\entryspacing{-0pt}
 
-\def \bulletstyle {\faAngleRight}
+\def\bulletstyle{\faAngleRight}
 
 % Define colours
 \definecolor{primary}{HTML}{000000}
@@ -69,15 +69,13 @@
 \definecolor{links}{HTML}{696969}
 \definecolor{subtle}{HTML}{c3c3c3}
 
-%------------------------------------------------------------------------------------------------------------------- 
-
 % Defines to make listing easier
-\def \location {\hspace{3pt}\locationicon \hspace{5pt}{\color{links}\locationtext}}
-\def \target {\targeticon \hspace{3pt}{\color{links}\targettext}}
-\def \phone {\phoneicon \hspace{3pt}{\color{links}{\phonetext}}}
-\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\underline{\linkedintext}}}
-\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\underline{\emailtext}}}
-\def \github {\githubicon \hspace{3pt}\href{\githublink}{\underline{\githubtext}}}
+\def\location{\hspace{3pt}\locationicon \hspace{5pt}{\color{links}\locationtext}}
+\def\target{\targeticon\hspace{3pt}{\color{links}\targettext}}
+\def\phone{\phoneicon\hspace{3pt}{\color{links}{\phonetext}}}
+\def\linkedin{\linkedinicon\hspace{3pt}\href{\linkedinlink}{\underline{\linkedintext}}}
+\def\email{\emailicon\hspace{3pt}\href{\emaillink}{\underline{\emailtext}}}
+\def\github{\githubicon\hspace{3pt}\href{\githublink}{\underline{\githubtext}}}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.55in}
@@ -93,13 +91,12 @@
 }
 
 % Set the margin alignment 
-\raggedbottom
-\raggedright
+\raggedbottom{}
+\raggedright{}
 \setlength{\tabcolsep}{0in}
 
-%-------------------------
-% Custom commands
-
+% COMMANDS
+%-----------------------------------------------------------------------------
 % Sections
 \newcommand{\projects}[2]{\vspace{6pt}
   \colorbox{Red}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
@@ -204,127 +201,105 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
   \end{tabularx}
 }
 
+% DOCUMENT
+%-----------------------------------------------------------------------------
 \begin{document}
-%-------------------------------------------------- BEGIN HERE --------------------------------------------------
 
-%---------------------------------------------------- HEADER ----------------------------------------------------
 \headertype{\github}{\linkedin}{\phone}{\location}{\target}{\email} % Set the order of items here
 
-%-------------------------------------------------- PROJECTS --------------------------------------------------
+% PROJECTS
+%-----------------------------------------------------------------------------
 \projects{\faFlask}{Projects}
 
-\resumeEntryStart
-\resumeEntryTD
-{Recommender System for Books using NLP}{\repo{https://github.com/jonathanhild/powellsbooks}{https://github.com/jonathanhild/powellsbooks}}
-\resumeItemListStart
-\resumeItem {\tag{In Process} The recommender algorithm uses NLP techniques to give recommendations based on Powell's Books' Staff Picks. This project includes a web scraping tool, SQLite database, and Streamlit web interface built in Python. \textit{This is an independent project not affiliated with Powell’s Books.}}
-\resumeItemListEnd
-\resumeEntryTD
-{GeoGuessr Maps}{\repo{https://github.com/jonathanhild/geoguessrmaps}{https://github.com/jonathanhild/geoguessrmaps}}
-\resumeItemListStart
-\resumeItem {Creating latitude/longitude coordinates sets made with Python and Google Maps API for Map Maker in \href{https://www.geoguessr.com}{\underline{GeoGuessr.com}}.}
-\resumeItemListEnd
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryTD{Recommender System for Books using NLP}{\repo{https://github.com/jonathanhild/powellsbooks}{https://github.com/jonathanhild/powellsbooks}}
+  \resumeItemListStart{
+    \resumeItem{\tag{In Process} The recommender algorithm uses NLP techniques to give recommendations based on Powell's Books' Staff Picks. This project includes a web scraping tool, SQLite database, and Streamlit web interface built in Python. \textit{This is an independent project not affiliated with Powell’s Books.}}}
+  \resumeItemListEnd{}
+  \resumeEntryTD{GeoGuessr Maps}{\repo{https://github.com/jonathanhild/geoguessrmaps}{https://github.com/jonathanhild/geoguessrmaps}}
+  \resumeItemListStart{
+    \resumeItem{Creating latitude/longitude coordinates sets made with Python and Google Maps API for Map Maker in \href{https://www.geoguessr.com}{\underline{GeoGuessr.com}}.}}
+  \resumeItemListEnd}
+\resumeEntryEnd{}
 
-%-------------------------------------------------- SKILLS --------------------------------------------------
+% SKILLS
+%-----------------------------------------------------------------------------
 \skills{\faGears}{Skills}
-\resumeEntryStart
-\resumeEntryS{Data Science \& Analysis}{\tag{Data Cleaning \& ETL}\tag{Machine Learning}\tag{Technical Writing}\tag{Documentation}\tag{Communication}\tag{Accounting}\tag{Database Design}\tag{Software Development}}
-\resumeEntryS{Programming Languages} {\tag{Python}\tag{T-SQL}\tag{Regex}\tag{HTML / CSS / JS}\tag{C / C++}\tag{VBA}}
-\resumeEntryS{Tools} {\tag{Anaconda}\tag{PostgreSQL}\tag{SQL Server}\tag{SQLite}\tag{SSMS}\tag{Git}\tag{Excel}}
-\resumeEntryS{Information Technology} {\tag{Database Admin}\tag{Ubuntu 16.04+}\tag{Windows Server Admin}\tag{Dynamics NAV}}
 
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryS{Data Science \& Analysis}{\tag{Data Cleaning \& ETL}\tag{Machine Learning}\tag{Web Scraping}\tag{Database Design}\tag{Regex}\tag{Technical Writing \& Communication}\tag{Accounting}}
+  \resumeEntryS{Python}{\tag{Pandas}\tag{Numpy}\tag{SKLearn}\tag{Matplotlib}\tag{Seaborn}\tag{SQLAlchemy}\tag{Beautiful Soup}}}
+\resumeEntryS{Tools} {\tag{SQL}\tag{Anaconda}\tag{PostgreSQL}\tag{SQL Server}\tag{SQLite}\tag{SSMS}\tag{Git \& GitHub}\tag{Excel}}
+\resumeEntryS{Information Technology} {\tag{Database Admin}\tag{Ubuntu Linux 16.04+}\tag{Windows Server Admin}\tag{Dynamics NAV}}
+\resumeEntryEnd{}
 
-%-------------------------------------------------- EXPERIENCE --------------------------------------------------
+% EXPERIENCE
+%-----------------------------------------------------------------------------
 \experience{\faPieChart}{Experience}
-\resumeEntryStart
-\resumeEntryTSDL
-{IT Specialist / Supplier Quality Specialist / Tech. Documents Coord.}{Aug 2012 -- Jan 2020}
-{Oregon Spice Company}{Portland, OR}
-\resumeItemListStart
-\resumeItem {ETL project to migrate 10+ years of ERP data to new system. Extensive use of Python scripting with regex for cleaning and load into Dynamics NAV. Required to perform data load in <12 hours for ERP transition.
-}
-\resumeItem {Created linear regression model to dynamically select packaging components based on material densities. Used Python scripting to produce spreadsheets for loading into ERP system.}
-\resumeItem {Created reporting and analytics for multiple business units using Jet Reports (Excel).}
-\resumeItem {Database and server administrator for Dynamics NAV environment. Implemented backup and performance tuning workflows. Migrated from single-tier to two-tier environment for performance improvements.}
-\resumeItem {Management of all IT operations in organization. Equipment procurement with multiple vendors. Creation of IT business continuity plan.}
-\resumeItem {Built supplier grading/monitoring program in Tracegains SaaS with custom SQL scripting. Created supplier performance KPIs for organization. Managed supplier approval and communication with suppliers.}
-\resumeItem {Built Access program to create, manage, and version specifications. Connect to Syspro ERP using SQL and ODBC connectors. Built Access program to rapidly compute product traceability.}
-\resumeItem {Development of multiple new food safety and quality systems.}
-\resumeItem {Technical point of contact to customers on food safety and quality. Provided verbal and written communication to customers. Organized documentation for rapid turn-around to customers.}
-\resumeItemListEnd
-\resumeEntryEnd
 
-\resumeEntryStart
-\resumeEntryTSDL
-{QA Supervisor}{Nov 2011 -- Apr 2012}
-{Bridgetown Natural Foods}{Portland, OR}
-\resumeItemListStart
-\resumeItem {Supervised 6-person QA and sanitation team.}
-\resumeItemListEnd
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryTSDL{IT Specialist / Supplier Quality Specialist / Tech. Documents Coord.}{Aug 2012 \textemdash{} Jan 2020}{Oregon Spice Company}{Portland, OR}
+  \resumeItemListStart{
+    \resumeItem{ETL project to migrate 10+ years of company data to new ERP system. Extensive use of Python scripting with regex for cleaning and load into Dynamics NAV.}
+    \resumeItem{Created linear regression model to dynamically select packaging components based on material densities. Used Python scripting to produce new item SKUs.}
+    \resumeItem{Created reporting and analytics for multiple business units with Excel and SSRS.}
+    \resumeItem{Managed all IT operations. Database and server administrator for Dynamics NAV environment. Implemented backup and performance tuning workflows.}
+    \resumeItem{Built supplier grading/monitoring program in Tracegains SaaS with custom SQL scripting. Created supplier performance KPIs for organization.}
+    \resumeItem{Built Access program to create, manage, and version specifications. Connect to Syspro ERP using SQL and ODBC connectors. Built Access program to rapidly compute product traceability.}
+    \resumeItem{Technical point of contact to customers on food safety and quality documentation.}}
+  \resumeItemListEnd}
+\resumeEntryEnd{}
 
-\pagebreak
+\resumeEntryStart{
+  \resumeEntryTSDL{QA Supervisor}{Nov 2011 \textemdash{} Apr 2012}{Bridgetown Natural Foods}{Portland, OR}
+  \resumeItemListStart{
+    \resumeItem{Supervised 6-person QA and sanitation team.}}
+  \resumeItemListEnd{}}
+\resumeEntryEnd{}
 
-\resumeEntryStart
-\resumeEntryTSDL
-{QA Projects Leader}{Aug 2010 -- Oct 2011}
-{Sunshine Dairy Foods}{Portland, OR, USA}
-\resumeItemListStart
-\resumeItem {Development of food safety systems and GFSI readiness.}
-\resumeItemListEnd
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryTSDL{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}{Sunshine Dairy Foods}{Portland, OR, USA}
+  \resumeItemListStart{
+    \resumeItem{Development of food safety systems and GFSI readiness.}}
+  \resumeItemListEnd{}}
+\resumeEntryEnd{}
 
-\resumeEntryStart
-\resumeEntryTSDL
-{QA/R\&D Technician}{Apr 2008 -- Aug 2010}
-{Beaverton Foods}{Hillsboro, OR, USA}
-\resumeItemListStart
-\resumeItem {Food safety and quality assurance lab analysis.}
-\resumeItem {Product development of mustards, sauces and condiments.}
-\resumeItemListEnd
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryTSDL{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}{Beaverton Foods}{Hillsboro, OR, USA}
+  \resumeItemListStart{
+    \resumeItem{Food safety and quality assurance lab analysis.}
+    \resumeItem{Product development of mustards, sauces and condiments.}}
+  \resumeItemListEnd{}}
+\resumeEntryEnd{}
 
-\resumeEntryStart
-\resumeEntryTSDL
-{Quality Intern}{May 2006 -- Aug 2006}
-{Lactalis American Group}{Nampa, ID, USA}
-\resumeItemListStart
-\resumeItem {Statistical analysis of processing data to control weight variances in the mozzarella line.}
-\resumeItemListEnd
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryTSDL{Quality Intern}{May 2006 \textemdash{} Aug 2006}{Lactalis American Group}{Nampa, ID, USA}
+  \resumeItemListStart{
+    \resumeItem{Statistical analysis of processing data to control weight variances in the mozzarella line.}}
+  \resumeItemListEnd{}}
+\resumeEntryEnd{}
 
-\resumeEntryStart
-\resumeEntryTSDL
-{Laboratory Assistant}{May 2005 -- May 2006}
-{University of Idaho}{Moscow, ID, USA}
-\resumeItemListStart
-\resumeItem {Research project in size exclusion chromatography analysis of starch chain fractions in Teff.}
-\resumeItemListEnd
-\resumeEntryEnd
+\resumeEntryStart{
+  \resumeEntryTSDL{Laboratory Assistant}{May 2005 \textemdash{} May 2006}{University of Idaho}{Moscow, ID, USA}
+  \resumeItemListStart{
+    \resumeItem{Research project in size exclusion chromatography analysis of starch chain fractions in Teff.}}
+  \resumeItemListEnd{}}
+\resumeEntryEnd{}
 
-%-------------------------------------------------- EDUCATION --------------------------------------------------
+% EDUCATION
+%-----------------------------------------------------------------------------
 \education{\faGraduationCap}{Education}
 
-\resumeEntryStart
-\resumeEntryTSDL
-{University of Washington}{2020 -- Present}
-{Certificate in Data Science}{Online}
-\resumeEntryTSDL
-{Dataquest.io}{2020}
-{(View) \href{https://app.dataquest.io/view_cert/G76HQZAT7X8UQNXKR3LR/}{\underline{Data Analyst in Python}}}{Online}
-\resumeEntryTSDL
-{Portland Community College}{2015}
-{Courses in Computer Science I/II}{Portland, OR}
-\resumeEntryTSDL
-{University of Idaho}{2003 -- 2007}
-{BSFS in Food Science \& Toxicology}{Moscow, ID}
+\resumeEntryStart{
+  \resumeEntryTSDL{University of Washington}{2020 \textemdash{} Present}{Certificate in Data Science}{Online}
+  \resumeEntryTSDL{Dataquest.io}{2020}{(View) \href{https://app.dataquest.io/view_cert/G76HQZAT7X8UQNXKR3LR/}{\underline{Data Analyst in Python}}}{Online}
+  \resumeEntryTSDL{Portland Community College}{2015}{Courses in Computer Science I/II}{Portland, OR}
+  \resumeEntryTSDL{University of Idaho}{2003 \textemdash{} 2007}{BSFS in Food Science \& Toxicology}{Moscow, ID}}
+\resumeEntryEnd{}
 
-\resumeEntryEnd
-
+% REFERENCES NOTE
+%-----------------------------------------------------------------------------
 \bigskip
-
 \begin{center}
   \color{accent}\small{\textit{References are available upon request.}}
 \end{center}
