@@ -10,7 +10,7 @@
 \usepackage{enumitem}
 \usepackage{ifxetex}
 \if{xetex}
-  \usepackage{fontspec}
+  \usepackage[T1]{fontenc}
   \usepackage[xetex]{hyperref}
 \else
   \usepackage[utf8]{inputenc}
@@ -99,18 +99,18 @@
 %-----------------------------------------------------------------------------
 % Sections
 \newcommand{\projects}[2]{\vspace{6pt}
-  \colorbox{Red}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
+  \colorbox{Red}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 \newcommand{\skills}[2]{\vspace{6pt}
-  \colorbox{Green}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
+  \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 \newcommand{\experience}[2]{\vspace{6pt}
-  \colorbox{Blue}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
+  \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 \newcommand{\education}[2]{\vspace{6pt}
-  \colorbox{Copper}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{9pt}#2\hspace{4pt}}}}
+  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 % Entry start and end, for spacing
@@ -216,9 +216,9 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
   \resumeItemListStart{
     \resumeItem{\tag{In Process} The recommender algorithm uses NLP techniques to give recommendations based on Powell's Books' Staff Picks. This project includes a web scraping tool, SQLite database, and Streamlit web interface built in Python. \textit{This is an independent project not affiliated with Powell’s Books.}}}
   \resumeItemListEnd{}
-  \resumeEntryTD{GeoGuessr Maps}{\repo{https://github.com/jonathanhild/geoguessrmaps}{https://github.com/jonathanhild/geoguessrmaps}}
+  \resumeEntryTD{FDA Dashboard}{\repo{https://github.com/jonathanhild/fdadashboard}{https://github.com/jonathanhild/fdadashboard}}
   \resumeItemListStart{
-    \resumeItem{Creating latitude/longitude coordinates sets made with Python and Google Maps API for Map Maker in \href{https://www.geoguessr.com}{\underline{GeoGuessr.com}}.}}
+    \resumeItem{\tag{In Process} Plotly Dash dashboard for food safety risks from FDA publically-accessible datasets.}}
   \resumeItemListEnd}
 \resumeEntryEnd{}
 
