@@ -29,7 +29,7 @@
 %-----------------------------------------------------------------------------
 % Header settings
 \def\fullname{Jonathan Hildenbrand}
-\def\subtitle{Data Analytics \& Data Science}
+\def\subtitle{Data Analyst \& Food Scientist}
 
 \def\githubicon{\faGithub}
 \def\githublink{https://github.com/jonathanhild}
@@ -50,7 +50,7 @@
 \def\locationtext{Portland, Oregon}
 
 \def\targeticon{\faBinoculars}
-\def\targettext{Local, Remote WFH \& Relocation}
+\def\targettext{Local \& Remote WFH}
 
 \def\headertype{\doublecol} % \singlecol or \doublecol
 
@@ -114,52 +114,65 @@
 }
 
 % Entry start and end, for spacing
-\newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
-\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+\newcommand{\resumeSectionStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeSectionEnd}{\end{itemize}}
 
 % Itemized list for the bullet points under an entry, if necessary
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 % Resume item
 \renewcommand{\labelitemii}{\bulletstyle}
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1\vspace{-2pt}}}
 }
 
 \newcommand{\repo}[2]{\href{#1}{\underline{#2}}}
 
-% Entry with title, subheading, date(s), and location
-\newcommand{\resumeEntryTSDL}[4]{
+
+% Entry for projects: title and link
+\newcommand{\resumeProject}[3]{
   \vspace{-1pt}\item[]
-    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
-      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
-      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
-    \end{tabularx}\vspace{-6pt}
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}} r}
+      \textbf{\color{primary}#1} & {\color{accent}\small#2} \\
+    \end{tabularx}
+    {#3}
+  \vspace{-3pt}
 }
 
-% Entry with title and date(s)
-\newcommand{\resumeEntryTD}[2]{
-  \vspace{-1pt}\item[]
-    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
-      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
-    \end{tabularx}\vspace{-6pt}
-}
-
-% Entry for special (skills)
-\newcommand{\resumeEntryS}[2]{
+% Entry for skills: heading, attributes
+\newcommand{\resumeSkill}[2]{
+  \vspace{-3pt}
   \item[]
-    \vspace{-1pt}
-      \begin{tabular}{ p{2in} m{5.5in} }
-      {\small{\textbf{#1 }}} & {\small{#2}}
-      \end{tabular}\vspace{-6pt}
+    \begin{tabularx}{0.97\textwidth}{>{\hsize=.2\hsize}X X }
+      {\textbf{#1}} & {\small#2} \\
+    \end{tabularx}
+  \vspace{-3pt}
+}
+
+
+% Entry for job experience: title, subheading, dates, description
+\newcommand{\resumeExperience}[3]{
+  \vspace{-3pt}
+  \item[]
+    \begin{tabularx}{0.97\textwidth}{>{\raggedright}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
+      \textbf{\color{primary}#1} & \textit{\color{accent}#2} & \textit{\color{accent}\small#3} \\
+    \end{tabularx}
+}
+
+% Entry for education: school, program, dates
+\newcommand{\resumeEducation}[3]{
+  \vspace{-1pt}
+  \item[]
+    \begin{tabularx}{0.97\textwidth}[t]{>{\raggedright}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
+      \textbf{\color{primary}#1} & {\small#2} & \textit{\color{accent}\small#3} \\
+    \end{tabularx}
+  \vspace{-3pt}
 }
 
 \newcommand{\tag}[1]{%
   \tikzmarknode[fill=white,fill
-opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text height=1.5ex,text depth=.25ex, text opacity=1]{test}{\small{#1}}
+opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text height=1.5ex,text depth=.25ex, text opacity=1]{test}{\hspace{1pt}\small{#1}\hspace{1pt}}
 }
 
 % Double column header
@@ -171,7 +184,7 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
         {\textit{\subtitle}} % You could add a subtitle here
       \end{tabular}
     } & {
-      \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+      \begin{tabular}[c]{l@{\hspace{1.5em}} l}
         {\small#4} & {\small#1} \\
         {\small#5} & {\small#2} \\
         {\small#6} & {\small#3}
@@ -209,99 +222,130 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
 
 % PROJECTS
 %-----------------------------------------------------------------------------
-\projects{\faFlask}{Projects}
+\projects{\faFlask}{Notable Projects}
 
-\resumeEntryStart{
-  \resumeEntryTD{Recommender System for Books using NLP}{\repo{https://github.com/jonathanhild/powellsbooks}{https://github.com/jonathanhild/powellsbooks}}
-  \resumeItemListStart{
-    \resumeItem{\tag{In Process} The recommender algorithm uses NLP techniques to give recommendations based on Powell's Books' Staff Picks. This project includes a web scraping tool, SQLite database, and Streamlit web interface built in Python. \textit{This is an independent project not affiliated with Powell’s Books.}}}
-  \resumeItemListEnd{}
-  \resumeEntryTD{Recall Dashboard}{\repo{https://github.com/jonathanhild/fdadashboard}{https://github.com/jonathanhild/fdadashboard}}
-  \resumeItemListStart{
-    \resumeItem{\tag{In Process} Data dashboard using Plotly Dash of keyword trends in recall data from US and International APIs.}}
-  \resumeItemListEnd}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeProject{Recall Dashboard}{\repo{https://github.com/jonathanhild/fdadashboard}{https://github.com/jonathanhild/fdadashboard}}{\tag{Portfolio}End-to-end project to build data dashboard from US and International food recall sources. Uses natural language processing and machine learning to classify recall events. Provides useful information for analysis of emerging hazards.}
+
+  \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA analysis to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset and presented findings to plant operations team.}
+
+  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL of 10+ years company data with Python scripting for new ERP system; automated process completed in 6 hours. Data model and Python scripting to generate 600+ item SKUs using raw material densities.}
+
+  % \resumeProject{Traceability System}{@ Oregon Spice Company}{Scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
+
+  % \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Using Tracegains SaaS, created supplier approval program. Created program standards, KPIs and documentation.}
+
+  % \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Connect to company ERP using SQL and ODBC connectors.}
+
+  % \resumeProject{Customer Technical Documentation}{@ Oregon Spice Company}{Created and maintained all company technical documentation. Developed 30 pg. "Answerraire" as a unified document for common questions.}
+
+}
+\resumeSectionEnd{}
 
 % SKILLS
 %-----------------------------------------------------------------------------
 \skills{\faGears}{Skills}
 
-\resumeEntryStart{
-  \resumeEntryS{Data Science \& Analysis}{\tag{Data Cleaning \& ETL}\tag{Machine Learning}\tag{Web Scraping}\tag{Database Design}\tag{Regex}\tag{JIRA \& Project Management}\tag{Technical Writing \& Communication}\tag{Accounting}}
-  \resumeEntryS{Python}{\tag{Pandas}\tag{Numpy}\tag{SKLearn}\tag{Matplotlib}\tag{Seaborn}\tag{SQLAlchemy}\tag{Beautiful Soup}}}
-\resumeEntryS{Tools}{\tag{SQL}\tag{Anaconda}\tag{PostgreSQL}\tag{SQL Server}\tag{SQLite}\tag{SSMS}\tag{Git \& GitHub}\tag{Excel}}
-\resumeEntryS{Information Technology}{\tag{Database Admin}\tag{Ubuntu Linux 16.04+}\tag{Windows Server Admin}\tag{Dynamics NAV}}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeSkill{Data Analysis}{
+    \tag{Statistical Analysis}
+    \tag{Exploratory Data Analysis}
+    \tag{Predictive Analysis}
+    \tag{Data Cleaning}
+    \tag{Report Design}
+    \tag{Database Design}
+    \tag{Regex}
+    \tag{Web Scraping}
+    \tag{Technical Writing}
+    \tag{JIRA}
+  }
+  \resumeSkill{Programming}{
+    \tag{T-SQL}
+    \tag{Python}
+    \tag{C/C++}
+    \tag{Visual Basic}
+    \tag{HTML/CSS/Javascript}
+  }
+  \resumeSkill{Tools}{
+    \tag{Anaconda}
+    \tag{PostgreSQL}
+    \tag{SQL Server}
+    \tag{SQLite}
+    \tag{Git \& GitHub}
+    \tag{Excel}
+    \tag{Linux}
+    \tag{Windows Server Admin}
+  }
+  \resumeSkill{Food Science}{
+    \tag{HACCP/HARPC}
+    \tag{Supplier Risk Assessment}
+    \tag{Analytical Chemistry}
+    \tag{Microbiology}
+    \tag{Technical Documentation}
+    \tag{BRC Certification}
+    \tag{SQF Lvl 2 Cert.}
+  }
+}
+\resumeSectionEnd{}
 
 % EXPERIENCE
 %-----------------------------------------------------------------------------
-\experience{\faPieChart}{Experience}
+\experience{\faPieChart}{Work Experience}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{IT Specialist / Supplier Quality Specialist / Tech. Documents Coord.}{Aug 2012 \textemdash{} Jan 2020}{Oregon Spice Company}{Portland, OR}
-  \resumeItemListStart{
-    \resumeItem{ETL project to migrate 10+ years of company data to new ERP system. Extensive use of Python scripting with regex for cleaning and load into Dynamics NAV.}
-    \resumeItem{Created linear regression model to dynamically select packaging components based on material densities. Used Python scripting to produce new item SKUs.}
-    \resumeItem{Created reporting and analytics for multiple business units with Excel and SSRS.}
-    \resumeItem{Managed all IT operations. Database and server administrator for Dynamics NAV environment. Implemented backup and performance tuning workflows.}
-    \resumeItem{Built supplier grading/monitoring program in Tracegains SaaS with custom SQL scripting. Created supplier performance KPIs for organization.}
-    \resumeItem{Built Access program to create, manage, and version specifications. Connect to Syspro ERP using SQL and ODBC connectors. Built Access program to rapidly compute product traceability.}
-    \resumeItem{Technical point of contact to customers on food safety and quality documentation.}}
-  \resumeItemListEnd}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeExperience{Oregon Spice Company}{}{Aug 2012 \textemdash{} Jan 2020}
+  \textit{\color{accent}IT Specialist} \textemdash{} Managed company IT infrastructure for ~100 employee company. \\
+  \textit{\color{accent}Supplier Quality Specialist} \textemdash{} Developed supplier approval program requirements and communicated requirements to suppliers. \\
+  \textit{\color{accent}Technical Documents Coordinator} \textemdash{} Responsible for communicating food safety and quality matters, creating and compiling documentation to customers.
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{QA Supervisor}{Nov 2011 \textemdash{} Apr 2012}{Bridgetown Natural Foods}{Portland, OR}
-  \resumeItemListStart{
-    \resumeItem{Supervised 6-person QA and sanitation team.}}
-  \resumeItemListEnd{}}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeExperience{Bridgetown Natural Foods}{QA Supervisor}{Nov 2011 \textemdash{} Apr 2012}
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}{Sunshine Dairy Foods}{Portland, OR, USA}
-  \resumeItemListStart{
-    \resumeItem{Development of food safety systems and GFSI readiness.}}
-  \resumeItemListEnd{}}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}{Beaverton Foods}{Hillsboro, OR, USA}
-  \resumeItemListStart{
-    \resumeItem{Food safety and quality assurance lab analysis.}
-    \resumeItem{Product development of mustards, sauces and condiments.}}
-  \resumeItemListEnd{}}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{Quality Intern}{May 2006 \textemdash{} Aug 2006}{Lactalis American Group}{Nampa, ID, USA}
-  \resumeItemListStart{
-    \resumeItem{Statistical analysis of processing data to control weight variances in the mozzarella line.}}
-  \resumeItemListEnd{}}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{Laboratory Assistant}{May 2005 \textemdash{} May 2006}{University of Idaho}{Moscow, ID, USA}
-  \resumeItemListStart{
-    \resumeItem{Research project in size exclusion chromatography analysis of starch chain fractions in Teff.}}
-  \resumeItemListEnd{}}
-\resumeEntryEnd{}
+\resumeSectionStart{
+  \resumeExperience{University of Idaho}{Laboratory Assistant}{May 2005 \textemdash{} May 2006}
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
 % EDUCATION
 %-----------------------------------------------------------------------------
 \education{\faGraduationCap}{Education}
 
-\resumeEntryStart{
-  \resumeEntryTSDL{University of Washington}{2020 \textemdash{} Present}{Certificate in Data Science}{Online}
-  \resumeEntryTSDL{Dataquest.io}{2020}{(View) \href{https://app.dataquest.io/view_cert/G76HQZAT7X8UQNXKR3LR/}{\underline{Data Analyst in Python}}}{Online}
-  \resumeEntryTSDL{Portland Community College}{2015}{Courses in Computer Science I/II}{Portland, OR}
-  \resumeEntryTSDL{University of Idaho}{2003 \textemdash{} 2007}{BSFS in Food Science \& Toxicology}{Moscow, ID}}
-\resumeEntryEnd{}
+\resumeSectionStart{
 
-% REFERENCES NOTE
-%-----------------------------------------------------------------------------
-\bigskip
-\begin{center}
-  \color{accent}\small{\textit{References are available upon request.}}
-\end{center}
+  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} Present}
+
+  \resumeEducation{Dataquest.io}{\href{https://app.dataquest.io/view_cert/G76HQZAT7X8UQNXKR3LR/}{\underline{Data Analyst in Python}} (View)}{2020}
+
+  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
+
+  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
+
+}
+\resumeSectionEnd{}
 
 \end{document}
