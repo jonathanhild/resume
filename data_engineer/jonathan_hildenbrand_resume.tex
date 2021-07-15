@@ -1,7 +1,6 @@
 %-----------------------------------------------------------------------------
-% LaTeX Resume for Data Science & Software Developer
+% LaTeX Resume for Data Engineer
 % Author : Jonathan Hildenbrand
-% License : MIT
 %-----------------------------------------------------------------------------
 
 \documentclass[letterpaper,12pt]{article}[leftmargin=*]
@@ -29,7 +28,6 @@
 %-----------------------------------------------------------------------------
 % Header settings
 \def\fullname{Jonathan Hildenbrand}
-\def\subtitle{Machine Learning Engineer}
 
 \def\githubicon{\faGithub}
 \def\githublink{https://github.com/jonathanhild}
@@ -129,50 +127,46 @@
 
 \newcommand{\repo}[2]{\href{#1}{\underline{#2}}}
 
-
 % Entry for projects: title and link
 \newcommand{\resumeProject}[3]{
-  \vspace{-1pt}\item[]
+  \vspace{-6pt}\item[]
     \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}} r}
       \textbf{\color{primary}#1} & {\color{accent}\small#2} \\
     \end{tabularx}
     {#3}
-  \vspace{-3pt}
 }
 
 % Entry for skills: heading, attributes
 \newcommand{\resumeSkill}[2]{
-  \vspace{-3pt}
+  \vspace{-6pt}
   \item[]
     \begin{tabularx}{0.97\textwidth}{>{\hsize=.2\hsize}X X }
       {\textbf{#1}} & {\small#2} \\
     \end{tabularx}
-  \vspace{-3pt}
 }
 
 
 % Entry for job experience: title, subheading, dates, description
 \newcommand{\resumeExperience}[3]{
-  \vspace{-3pt}
+  \vspace{-6pt}
   \item[]
     \begin{tabularx}{0.97\textwidth}{>{\raggedright}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
       \textbf{\color{primary}#1} & \textit{\color{accent}#2} & \textit{\color{accent}\small#3} \\
-    \end{tabularx}
+  \end{tabularx}
+    
 }
 
 % Entry for education: school, program, dates
 \newcommand{\resumeEducation}[3]{
-  \vspace{-1pt}
+  \vspace{-6pt}
   \item[]
     \begin{tabularx}{0.97\textwidth}[t]{>{\raggedright}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
       \textbf{\color{primary}#1} & {\small#2} & \textit{\color{accent}\small#3} \\
     \end{tabularx}
-  \vspace{-3pt}
 }
 
 \newcommand{\tag}[1]{%
-  \tikzmarknode[fill=white,fill
-opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text height=1.5ex,text depth=.25ex, text opacity=1]{test}{\hspace{1pt}\small{#1}\hspace{1pt}}
+  \tikzmarknode[fill=white,fill opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text height=1.5ex,text depth=.25ex, text opacity=1]{test}{\hspace{1pt}\small{#1}\hspace{1pt}}
 }
 
 % Double column header
@@ -180,8 +174,7 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
   \begin{tabularx}{\textwidth}{Xr}
     {
       \begin{tabular}[c]{l}
-        \fontsize{24}{34}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
-        {\textit{\subtitle}} % You could add a subtitle here
+        \fontsize{24}{34}\selectfont{\color{primary}{{\textbf{\fullname}}}}
       \end{tabular}
     } & {
       \begin{tabular}[c]{l@{\hspace{1.5em}} l}
@@ -214,7 +207,8 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
   \end{tabularx}
 }
 
-% DOCUMENT
+% START DOCUMENT
+%-----------------------------------------------------------------------------
 %-----------------------------------------------------------------------------
 \begin{document}
 
@@ -225,97 +219,40 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
 \projects{\faFlask}{Notable Projects}
 
 \resumeSectionStart{
-  \resumeProject{Recall Dashboard}{\tag{Portfolio}\repo{https://github.com/jonathanhild/fdadashboard}{https://github.com/jonathanhild/fdadashboard}}{End-to-end project to build data dashboard from US and International food recall sources. Uses natural language processing and machine learning to classify recall events. Provides useful information for analysis of emerging food safety hazards.}
 
-  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL of 10+ years company data with Python scripting for new ERP system; automated process completed in 6 hours. Data model and Python scripting to generate 600+ item SKUs using raw material densities.}
+  % Data Science Projects
 
-  \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA analysis to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset and presented findings to plant operations team.}
+  % \resumeProject{FDA-Explorer Dashboard}{@ \repo{https://github.com/jonathanhild/fda-explorer}{github.com/jonathanhild/fda-explorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
 
+  \resumeProject{VargScore Machine Learning \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{NLP model with inference/training ML pipeline in Flask to find heavy metal bands bigoted leanings.}
 
-  % \resumeProject{Traceability System}{@ Oregon Spice Company}{Scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
+  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
 
-  % \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Using Tracegains SaaS, created supplier approval program. Created program standards, KPIs and documentation.}
+  \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
 
-  % \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Connect to company ERP using SQL and ODBC connectors.}
+  \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
 
-  % \resumeProject{Customer Technical Documentation}{@ Oregon Spice Company}{Created and maintained all company technical documentation. Developed 30 pg. "Answerraire" as a unified document for common questions.}
+  % Food Science Projects
+
+  % \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
+
+  % \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
 
 }
 \resumeSectionEnd{}
 
 % SKILLS
 %-----------------------------------------------------------------------------
-\skills{\faGears}{Skills}
+\skills{\faGears}{Technical Skills}
 
 \resumeSectionStart{
-  \resumeSkill{Python}{
-    \tag{Pandas}
-    \tag{NumPy}
-    \tag{SciPy}
-    \tag{SciKit-Learn}
-    \tag{NLTK}
-    \tag{spaCy}
-    \tag{Matplotlib}
-    \tag{Seaborn}
-    \tag{SQLAlchemy}
-    \tag{Conda}
-  }
-  \resumeSkill{Languages}{
-    \tag{SQL}
-    \tag{Regex}
-    \tag{HTML/CSS/Javascript}
-    \tag{C/C++}
-    \tag{Latex}
-  }
 
-  \resumeSkill{Data Science}{
-    \tag{ETL \& Data Cleaning}
-    \tag{Machine Learning}
-    \tag{Natural Language Processing}
-    \tag{Web Scraping}
-    \tag{ML Pipelines}
-    \tag{Database Design}
-  }
+  \resumeSkill{Proficient in}{Python, SQL, Machine Learning Pipelines, Scikit-Learn, Tensorflow/Keras, Flask, PostgreSQL, SQL Server, SQLite, Git, Excel, JIRA, Technical Writing}
 
-  % \resumeSkill{ML Engineering}{
-  %   \tag{ML Pipeline}
-  %   \tag{Database Design}
-  %   \tag{Database Performance Tuning}
-  %   \tag{Google Cloud}
-  % }
+  \resumeSkill{Familiar with}{Natural Language Processing, SpaCY, NLTK, PyTorch, Time Series Analysis, A/B Testing, Web Design, Linux, Windows Server, Docker, Amazon Web Services, ERP Systems, C/C++, VBA}
 
-  % \resumeSkill{Data Analysis}{
-  %   \tag{ETL \& Data Cleaning}
-  %   \tag{Natural Language Processing}
-  %   \tag{Report Design}
-  %   \tag{Database Design}
-  %   \tag{Web Scraping}
-  %   \tag{Technical Writing}
-  % }
+  % \resumeSkill{Food Science}{HARPC/HACCP, Analytical Chemistry, Microbiology, Supplier Management, Food Fraud, Risk Assessment, Nutrition Labeling, Genesis R\&D, Organic, Non-GMO, Kosher, Gluten-Free, BRC, SQF Lvl 2, End-to-End Traceability}
 
-  \resumeSkill{Tools}{
-    \tag{Plotly Dash}
-    \tag{PostgreSQL}
-    \tag{SQL Server}
-    \tag{SQLite}
-    \tag{Git \& GitHub}
-    \tag{Excel}
-    \tag{JIRA}
-    \tag{Linux Admin}
-    \tag{Database Admin}
-    \tag{Windows Server Admin}
-  }
-
-  % \resumeSkill{Food Science}{
-  %   \tag{HACCP/HARPC}
-  %   \tag{Supplier Risk Assessment}
-  %   \tag{Food Fraud Controls}
-  %   \tag{Analytical Chemistry}
-  %   \tag{Microbiology}
-  %   \tag{Technical Documentation}
-  %   \tag{BRC Certification}
-  %   \tag{SQF Lvl 2 Certification}
-  % }
 }
 \resumeSectionEnd{}
 
@@ -324,34 +261,34 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
 \experience{\faPieChart}{Work Experience}
 
 \resumeSectionStart{
-  \resumeExperience{Oregon Spice Company}{}{Aug 2012 \textemdash{} Jan 2020}
-  \textit{\color{accent}IT Specialist} \textemdash{} Managed IT infrastructure and projects for company of 100 employees.\\
-  \textit{\color{accent}Supplier Quality Specialist} \textemdash{} Created supplier approval program from ground-up with Tracegains. Responsible for supplier risk assessments and communication of requirements.\\
-  \textit{\color{accent}Technical Documents Coordinator} \textemdash{} Responsible for communicating food safety and quality matters, and composing documentation to customers.
+  \resumeExperience{Oregon Spice Company}{Multiple Positions}{Aug 2012 \textemdash{} Jan 2020}
+  \textbf{\textit{\color{accent}IT Specialist}} \textemdash{} Managed IT infrastructure and ERP system projects for company of 100 employees. Developed reports and analysis for accounting, sales, customer service units. \\
+  \textbf{\textit{\color{accent}Supplier Quality Specialist}} \textemdash{} Created supplier approval program from ground-up with Tracegains. Responsible for supplier risk assessments and communication of requirements. \\
+  \textbf{\textit{\color{accent}Technical Documents Coordinator}} \textemdash{} Responsible for communicating food safety and quality matters, and composing documentation to customers.
 }
 \vspace{-6pt}
 \resumeSectionEnd{}
 
 \resumeSectionStart{
   \resumeExperience{Bridgetown Natural Foods}{QA Supervisor}{Nov 2011 \textemdash{} Apr 2012}
-  Managed 6-person quality assurance and sanitation department. Assisted in food safety certification.
+  Managed 6-person quality assurance and sanitation department. Assisted in SQF certification.
 }
 \vspace{-6pt}
 \resumeSectionEnd{}
 
 \resumeSectionStart{
   \resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}
-  Developed of new programs and readiness audit for food safety certification.
+  Developed of new food safety programs and readiness audit for SQF certification.
 }
 \vspace{-6pt}
 \resumeSectionEnd{}
 
-% \resumeSectionStart{
-%   \resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}
-%   Lab analysis and product development of mustards and condiments.
-% }
-% \vspace{-6pt}
-% \resumeSectionEnd{}
+\resumeSectionStart{
+  \resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}
+  Lab analysis and product development of mustards and condiments.
+}
+\vspace{-6pt}
+\resumeSectionEnd{}
 
 % \resumeSectionStart{
 %   \resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}
@@ -369,13 +306,11 @@ opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text heigh
 
 % EDUCATION
 %-----------------------------------------------------------------------------
-\education{\faGraduationCap}{Education}
+\education{\faGraduationCap}{Education \& Certifications}
 
 \resumeSectionStart{
 
-  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} Present}
-
-  % \resumeEducation{Dataquest.io}{\href{https://app.dataquest.io/view_cert/G76HQZAT7X8UQNXKR3LR/}{\underline{Data Analyst}}, Data Scientist}{2020}
+  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} 2021}
 
   \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
 
