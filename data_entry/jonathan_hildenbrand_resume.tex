@@ -96,18 +96,17 @@
 % COMMANDS
 %-----------------------------------------------------------------------------
 % Sections
-\newcommand{\projects}[2]{\vspace{6pt}
+
+\newcommand{\experience}[2]{\vspace{6pt}
   \colorbox{Red}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+}
+\newcommand{\education}[2]{\vspace{6pt}
+  \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 \newcommand{\skills}[2]{\vspace{6pt}
   \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
-
-\newcommand{\experience}[2]{\vspace{6pt}
-  \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
-}
-
-\newcommand{\education}[2]{\vspace{6pt}
+\newcommand{\projects}[2]{\vspace{6pt}
   \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
@@ -216,45 +215,30 @@
 
 % PROJECTS
 %-----------------------------------------------------------------------------
-\projects{\faFlask}{Notable Projects}
+% \projects{\faFlask}{Notable Projects}
 
-\resumeSectionStart{
+% \resumeSectionStart{
 
-  % Data Science Projects
+%   % Data Science Projects
 
-  % \resumeProject{FDA-Explorer Dashboard}{@ \repo{https://github.com/jonathanhild/fda-explorer}{github.com/jonathanhild/fda-explorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
+%   % \resumeProject{FDA-Explorer Dashboard}{@ \repo{https://github.com/jonathanhild/fda-explorer}{github.com/jonathanhild/fda-explorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
 
-  \resumeProject{VargScore Machine Learning \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{NLP model with inference/training ML pipeline in Flask to find heavy metal bands bigoted leanings.}
+%   \resumeProject{VargScore Machine Learning \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{NLP model with inference/training ML pipeline in Flask to find heavy metal bands bigoted leanings.}
 
-  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
+%   \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
 
-  \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
+%   \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
 
-  \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
+%   \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
 
-  % Food Science Projects
+%   % Food Science Projects
 
-  % \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
+%   % \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
 
-  % \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
+%   % \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
 
-}
-\resumeSectionEnd{}
-
-% SKILLS
-%-----------------------------------------------------------------------------
-\skills{\faGears}{Technical Skills}
-
-\resumeSectionStart{
-
-  \resumeSkill{Proficient in}{Python, SQL, Machine Learning Pipelines, Scikit-Learn, Tensorflow/Keras, Flask, PostgreSQL, SQL Server, SQLite, Git, Excel, JIRA, Technical Writing}
-
-  \resumeSkill{Familiar with}{Natural Language Processing, SpaCY, NLTK, PyTorch, Time Series Analysis, A/B Testing, Web Design, Linux, Windows Server, Docker, Amazon Web Services, ERP Systems, C/C++, VBA}
-
-  % \resumeSkill{Food Science}{HARPC/HACCP, Analytical Chemistry, Microbiology, Supplier Management, Food Fraud, Risk Assessment, Nutrition Labeling, Genesis R\&D, Organic, Non-GMO, Kosher, Gluten-Free, BRC, SQF Lvl 2, End-to-End Traceability}
-
-}
-\resumeSectionEnd{}
+% }
+% \resumeSectionEnd{}
 
 % EXPERIENCE
 %-----------------------------------------------------------------------------
@@ -304,17 +288,32 @@
 % \vspace{-6pt}
 % \resumeSectionEnd{}
 
+% SKILLS
+%-----------------------------------------------------------------------------
+\skills{\faGears}{Technical Skills}
+
+\resumeSectionStart{
+
+  \resumeSkill{Proficient in}{Excel, Word, Powerpoint, Access, Python, SQL, JIRA, Typing 60-70 WPM, Google Analytics, Technical Writing, Statistic Methods}
+
+  \resumeSkill{Familiar with}{ERP Systems, Information Technology, Accounts Receivable/Accounts Payable, Finance}
+
+  % \resumeSkill{Food Science}{HARPC/HACCP, Analytical Chemistry, Microbiology, Supplier Management, Food Fraud, Risk Assessment, Nutrition Labeling, Genesis R\&D, Organic, Non-GMO, Kosher, Gluten-Free, BRC, SQF Lvl 2, End-to-End Traceability}
+
+}
+\resumeSectionEnd{}
+
 % EDUCATION
 %-----------------------------------------------------------------------------
 \education{\faGraduationCap}{Education \& Certifications}
 
 \resumeSectionStart{
 
-  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} 2021}
+  \resumeEducation{University of Washington}{Certificate in Data Science}{Oct 2020 \textemdash{} Jun 2021}
 
-  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
+  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{Jan 2015 \textemdash{} Jun 2015}
 
-  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
+  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{Aug 2003 \textemdash{} May 2007}
 
 }
 \resumeSectionEnd{}
