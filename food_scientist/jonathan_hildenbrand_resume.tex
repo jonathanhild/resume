@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------------
-% LaTeX Resume for Food Science
+% LaTeX Resume for Data Science
 % Author : Jonathan Hildenbrand
 %-----------------------------------------------------------------------------
 
@@ -96,19 +96,19 @@
 % COMMANDS
 %-----------------------------------------------------------------------------
 % Sections
-\newcommand{\projects}[2]{\vspace{6pt}
+\newcommand{\projects}[2]{\vspace{4pt}
+  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+}
+\newcommand{\skills}[2]{\vspace{4pt}
   \colorbox{Red}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
-\newcommand{\skills}[2]{\vspace{6pt}
+
+\newcommand{\experience}[2]{\vspace{4pt}
   \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
-\newcommand{\experience}[2]{\vspace{6pt}
+\newcommand{\education}[2]{\vspace{4pt}
   \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
-}
-
-\newcommand{\education}[2]{\vspace{6pt}
-  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 % Entry start and end, for spacing
@@ -211,48 +211,15 @@
 %-----------------------------------------------------------------------------
 %-----------------------------------------------------------------------------
 \begin{document}
-
-\headertype{\github}{\linkedin}{\phone}{\location}{\target}{\email} % Set the order of items here
-
-% PROJECTS
-%-----------------------------------------------------------------------------
-\projects{\faFlask}{Notable Projects}
-
-\resumeSectionStart{
-
-  % Data Science Projects
-
-  % \resumeProject{FDA-Explorer Dashboard}{@ \repo{https://github.com/jonathanhild/fda-explorer}{github.com/jonathanhild/fda-explorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
-
-  \resumeProject{VargScore Machine Learning \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{NLP model with inference/training ML pipeline in Flask to find heavy metal bands bigoted leanings.}
-
-  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
-
-  \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
-
-  \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
-
-  % Food Science Projects
-
-  % \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
-
-  % \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
-
-}
-\resumeSectionEnd{}
+\headertype{\linkedin}{\phone}{}{\location}{\target}{\email} % Set the order of items here
 
 % SKILLS
 %-----------------------------------------------------------------------------
 \skills{\faGears}{Technical Skills}
 
 \resumeSectionStart{
-
-  \resumeSkill{Proficient in}{Python, SQL, Machine Learning Pipelines, Scikit-Learn, Tensorflow/Keras, Flask, PostgreSQL, SQL Server, SQLite, Git, Excel, JIRA, Technical Writing}
-
-  \resumeSkill{Familiar with}{Natural Language Processing, SpaCY, NLTK, PyTorch, Time Series Analysis, A/B Testing, Web Design, Linux, Windows Server, Docker, Amazon Web Services, ERP Systems, C/C++, VBA}
-
-  % \resumeSkill{Food Science}{HARPC/HACCP, Analytical Chemistry, Microbiology, Supplier Management, Food Fraud, Risk Assessment, Nutrition Labeling, Genesis R\&D, Organic, Non-GMO, Kosher, Gluten-Free, BRC, SQF Lvl 2, End-to-End Traceability}
-
+  \resumeSkill{Food Science}{HARPC/HACCP, Analytical Chemistry, Microbiology, Supplier Management, Food Fraud, Risk Assessment, End-to-End Traceability, Nutrition Labeling,  Organic, Non-GMO, Kosher, Gluten-Free, BRC, SQF Lvl 2}
+  \resumeSkill{Other Skills}{Statistical, Data Analysis, Genesis R\&D, Tracegains, Advanced Excel, Office Suite, Information Technology, Programming Languages: Python, SQL}
 }
 \resumeSectionEnd{}
 
@@ -260,62 +227,29 @@
 %-----------------------------------------------------------------------------
 \experience{\faPieChart}{Work Experience}
 
-\resumeSectionStart{
-  \resumeExperience{Oregon Spice Company}{Multiple Positions}{Aug 2012 \textemdash{} Jan 2020}
-  \textbf{\textit{\color{accent}IT Specialist}} \textemdash{} Managed IT infrastructure and ERP system projects for company of 100 employees. Developed reports and analysis for accounting, sales, customer service units. \\
-  \textbf{\textit{\color{accent}Supplier Quality Specialist}} \textemdash{} Created supplier approval program from ground-up with Tracegains. Responsible for supplier risk assessments and communication of requirements. \\
-  \textbf{\textit{\color{accent}Technical Documents Coordinator}} \textemdash{} Responsible for communicating food safety and quality matters, and composing documentation to customers.
-}
-\vspace{-6pt}
-\resumeSectionEnd{}
-
-\resumeSectionStart{
-  \resumeExperience{Bridgetown Natural Foods}{QA Supervisor}{Nov 2011 \textemdash{} Apr 2012}
-  Managed 6-person quality assurance and sanitation department. Assisted in SQF certification.
-}
-\vspace{-6pt}
-\resumeSectionEnd{}
-
-\resumeSectionStart{
-  \resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}
-  Developed of new food safety programs and readiness audit for SQF certification.
-}
-\vspace{-6pt}
-\resumeSectionEnd{}
-
-\resumeSectionStart{
-  \resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}
-  Lab analysis and product development of mustards and condiments.
-}
-\vspace{-6pt}
-\resumeSectionEnd{}
-
-% \resumeSectionStart{
-%   \resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}
-%   Statistical analysis project to find sources of underweight finished products on mozzarella line.
-% }
-% \vspace{-6pt}
-% \resumeSectionEnd{}
-
-% \resumeSectionStart{
-%   \resumeExperience{University of Idaho}{Laboratory Assistant}{May 2005 \textemdash{} May 2006}
-%   Research project in size exclusion chromatography of carbohydrate chain fractions in teff grain.
-% }
-% \vspace{-6pt}
-% \resumeSectionEnd{}
+\resumeSectionStart{\resumeExperience{Oregon Spice Company}{Multiple Positions}{Aug 2012 \textemdash{} Jan 2020}\textbf{\textit{\color{accent}IT Specialist}} \textemdash{} Managed IT infrastructure and ERP system projects for company of 100 employees. Developed reports and analysis for accounting, sales, customer service units. \\ \textbf{\textit{\color{accent}Supplier Quality Specialist}} \textemdash{} Created supplier approval program from ground-up with Tracegains. Responsible for supplier risk assessments and communication of requirements. \\ \textbf{\textit{\color{accent}Technical Documents Coordinator}} \textemdash{} Responsible for communicating food safety and quality matters, and composing documentation to customers.}\vspace{-6pt}\resumeSectionEnd{}
+\resumeSectionStart{\resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}Developed of new food safety programs and readiness audit for SQF certification.}\vspace{-6pt}\resumeSectionEnd{}
+\resumeSectionStart{\resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}Lab analysis and product development of mustards and condiments.}\vspace{-6pt}\resumeSectionEnd{}
 
 % EDUCATION
 %-----------------------------------------------------------------------------
 \education{\faGraduationCap}{Education \& Certifications}
+\resumeSectionStart{
+  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} 2021}
+  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
+  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
+}
+\resumeSectionEnd{}
+
+% PROJECTS
+%-----------------------------------------------------------------------------
+\projects{\faFlask}{Notable Projects}
 
 \resumeSectionStart{
-
-  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} 2021}
-
-  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
-
-  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
-
+  \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
+  \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
+  \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
+  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
 }
 \resumeSectionEnd{}
 
