@@ -97,18 +97,18 @@
 %-----------------------------------------------------------------------------
 % Sections
 \newcommand{\projects}[2]{\vspace{4pt}
-  \colorbox{Red}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 \newcommand{\skills}[2]{\vspace{4pt}
   \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 \newcommand{\experience}[2]{\vspace{4pt}
-  \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+  \colorbox{Red}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 \newcommand{\education}[2]{\vspace{4pt}
-  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+  \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 % Entry start and end, for spacing
@@ -213,6 +213,38 @@
 \begin{document}
 \headertype{\github}{\linkedin}{\phone}{\location}{\target}{\email} % Set the order of items here
 
+% EXPERIENCE
+%-----------------------------------------------------------------------------
+\experience{\faPieChart}{Work Experience}
+
+\resumeSectionStart{\resumeExperience{Oregon Spice Company}{Multiple Positions}{Aug 2012 \textemdash{} Jan 2020}\textbf{\textit{\color{accent}IT Specialist}} \textemdash{} Managed IT infrastructure and ERP system projects. Developed reports and pricing analysis for accounting, sales, customer service units. Completed project to migrate 10+ years of company data to new ERP system.\\ \textbf{\textit{\color{accent}Supplier Quality Specialist}} \textemdash{} Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%. \\ \textbf{\textit{\color{accent}Technical Documents Coordinator}} \textemdash{} Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\vspace{-6pt}\resumeSectionEnd{}
+\resumeSectionStart{\resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}Development of new food safety programs and readiness audit for SQF certification.}\vspace{-6pt}\resumeSectionEnd{}
+\resumeSectionStart{\resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}Lab analysis and product development of mustards and condiments.}\vspace{-6pt}\resumeSectionEnd{}
+% \resumeSectionStart{\resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}Statistical analysis project of underweight finished products on mozzarella line. Determined which parts of production contributed were the greatest source of variance and presented analysis to senior management.}\vspace{-6pt}\resumeSectionEnd{}
+% \resumeSectionStart{\resumeExperience{University of Idaho}{Laboratory Assistant}{May 2005 \textemdash{} May 2006}Research project in size exclusion chromatography of carbohydrate chain fractions in teff grain.}\vspace{-6pt}\resumeSectionEnd{}
+
+
+% SKILLS
+%-----------------------------------------------------------------------------
+\skills{\faGears}{Technical Skills}
+
+\resumeSectionStart{
+  \resumeSkill{Proficient in}{Python, SQL, Data Pipelines, Machine Learning \& Deep Learning, PostgreSQL, SQL Server, SQLite, Git, Excel, JIRA, Regular Expressions, Web Scraping, Technical Writing}
+  \resumeSkill{Familiar with}{Natural Language Processing, SpaCY, NLTK, Time Series Analysis, A/B Testing, Web Design, Information Technology, Accounting, Power BI, ERP Systems, C/C++}
+}
+\resumeSectionEnd{}
+
+
+% EDUCATION
+%-----------------------------------------------------------------------------
+\education{\faGraduationCap}{Education \& Certifications}
+\resumeSectionStart{
+  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} 2021}
+  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
+  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
+}
+\resumeSectionEnd{}
+
 % PROJECTS
 %-----------------------------------------------------------------------------
 \projects{\faFlask}{Notable Projects}
@@ -226,33 +258,5 @@
 }
 \resumeSectionEnd{}
 
-% SKILLS
-%-----------------------------------------------------------------------------
-\skills{\faGears}{Technical Skills}
-
-\resumeSectionStart{
-  \resumeSkill{Proficient in}{Python, SQL, Data Pipelines, Machine Learning \& Deep Learning, PostgreSQL, SQL Server, SQLite, Git, Excel, JIRA, Regular Expressions, Web Scraping, Technical Writing}
-  \resumeSkill{Familiar with}{Natural Language Processing, SpaCY, NLTK, Time Series Analysis, A/B Testing, Web Design, HTML/CSS/JS, Linux, Windows Server, Power BI, ERP Systems, C/C++, VBA}
-}
-\resumeSectionEnd{}
-
-% EXPERIENCE
-%-----------------------------------------------------------------------------
-\experience{\faPieChart}{Work Experience}
-
-\resumeSectionStart{\resumeExperience{Oregon Spice Company}{Multiple Positions}{Aug 2012 \textemdash{} Jan 2020}\textbf{\textit{\color{accent}IT Specialist}} \textemdash{} Managed IT infrastructure and ERP system projects. Developed reports and pricing analysis for accounting, sales, customer service units. Completed project to migrate 10+ years of company data to new ERP system.\\ \textbf{\textit{\color{accent}Supplier Quality Specialist}} \textemdash{} Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%. \\ \textbf{\textit{\color{accent}Technical Documents Coordinator}} \textemdash{} Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\vspace{-6pt}\resumeSectionEnd{}
-\resumeSectionStart{\resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}Development of new food safety programs and readiness audit for SQF certification.}\vspace{-6pt}\resumeSectionEnd{}
-\resumeSectionStart{\resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}Lab analysis and product development of mustards and condiments.}\vspace{-6pt}\resumeSectionEnd{}
-% \resumeSectionStart{\resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}Statistical analysis project of underweight finished products on mozzarella line. Determined which parts of production contributed were the greatest source of variance and presented analysis to senior management.}\vspace{-6pt}\resumeSectionEnd{}
-% \resumeSectionStart{\resumeExperience{University of Idaho}{Laboratory Assistant}{May 2005 \textemdash{} May 2006}Research project in size exclusion chromatography of carbohydrate chain fractions in teff grain.}\vspace{-6pt}\resumeSectionEnd{}
-
-% EDUCATION
-%-----------------------------------------------------------------------------
-\education{\faGraduationCap}{Education \& Certifications}
-\resumeSectionStart{
-  \resumeEducation{University of Washington}{Certificate in Data Science}{2020 \textemdash{} 2021}
-  \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{2015}
-  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
-}
-\resumeSectionEnd{}
+% END DOCUMENT
 \end{document}
