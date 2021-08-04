@@ -29,6 +29,10 @@
 % Header settings
 \def\fullname{Jonathan Hildenbrand}
 
+\def\githubicon{\faGithub}
+\def\githublink{https://github.com/jonathanhild}
+\def\githubtext{jonathanhild}
+
 \def\linkedinicon{\faLinkedin}
 \def\linkedinlink{https://linkedin.com/in/jonathanh3}
 \def\linkedintext{jonathanh3}
@@ -59,6 +63,7 @@
 \definecolor{Red}{HTML}{ed5565}
 \definecolor{Blue}{HTML}{4fc1e9}
 \definecolor{Copper}{HTML}{9d8375}
+\definecolor{Neutral}{HTML}{8e8e8e}
 \definecolor{accent}{HTML}{666666}
 \definecolor{links}{HTML}{696969}
 \definecolor{subtle}{HTML}{c3c3c3}
@@ -93,7 +98,7 @@
 %-----------------------------------------------------------------------------
 % Sections
 \newcommand{\projects}[2]{\vspace{4pt}
-  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+  \colorbox{Neutral}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 \newcommand{\skills}[2]{\vspace{4pt}
   \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
@@ -209,23 +214,6 @@
 \begin{document}
 \headertype{\linkedin}{\phone}{}{\location}{\target}{\email} % Set the order of items here
 
-% PROJECTS
-%-----------------------------------------------------------------------------
-% \projects{\faFlask}{Notable Projects}
-
-% \resumeSectionStart{
-%   % Data Science Projects
-%   \resumeProject{FoodSafetyExplorer \tag{In Process}}{@ \repo{https://github.com/jonathanhild/foodsafetyexplorer}{github.com/jonathanhild/foodsafetyexplorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
-%   % \resumeProject{VargScore ML \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{NLP model with inference/training ML pipeline in Flask to identify fascist content in heavy metal music.}
-%   \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
-%   \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
-%   \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
-% Food Science Projects
-% \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
-% \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
-% }
-% \resumeSectionEnd{}
-
 % EXPERIENCE
 %-----------------------------------------------------------------------------
 \experience{\faPieChart}{Work Experience}
@@ -256,5 +244,23 @@
   \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{2003 \textemdash{} 2007}
 }
 \resumeSectionEnd{}
+
+% PROJECTS
+%-----------------------------------------------------------------------------
+% \projects{\faFlask}{Notable Projects}
+
+% \resumeSectionStart{
+
+%   \resumeProject{FoodSafetyExplorer \tag{In Process}}{@ \repo{https://github.com/jonathanhild/foodsafetyexplorer}{github.com/jonathanhild/foodsafetyexplorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
+%   \resumeProject{VargScore ML \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{NLP model with inference/training ML pipeline in Flask to identify fascist content in heavy metal music.}
+%   \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
+%   \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
+%   \resumeProject{Statistical Analysis of Mozarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
+%   Food Science Projects
+%   \resumeProject{Supplier Approval System}{@ Oregon Spice Company}{Created supplier approval program and risk analysis documentation for HARPC compliance. Used Tracegains for automatic notification and document collection with custom supplier risk scoring model.}
+%   \resumeProject{Spec Database}{@ Oregon Spice Company}{Built database-backed program to create, manage, and version specifications. Allowed QA deparment to organize and control 1200+ raw material and product specifications.}
+% }
+% \resumeSectionEnd{}
+
 % END DOCUMENT
 \end{document}
