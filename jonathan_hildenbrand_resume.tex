@@ -156,6 +156,12 @@
     
 }
 
+\newcommand{\resumeSubExperience}[2]{
+  \begin{tabularx}{0.97\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft}X}
+    \textbf{\color{accent}#1} & \textit{\color{accent}\small#2}
+  \end{tabularx}
+}
+
 % Entry for education: school, program, dates
 \newcommand{\resumeEducation}[3]{
   \vspace{-6pt}
@@ -217,7 +223,11 @@
 %-----------------------------------------------------------------------------
 \experience{\faPieChart}{Work Experience}
 
-\resumeSectionStart{\resumeExperience{Oregon Spice Company}{Multiple Positions}{Aug 2012 \textemdash{} Jan 2020}\textbf{\textit{\color{accent}IT Specialist}} \textemdash{} Managed IT infrastructure and ERP system projects. Developed reports and pricing analysis for accounting, sales, customer service units. Completed project to migrate 10+ years of company data to new ERP system.\\ \textbf{\textit{\color{accent}Supplier Quality Specialist}} \textemdash{} Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%. \\ \textbf{\textit{\color{accent}Technical Documents Coordinator}} \textemdash{} Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\vspace{-6pt}\resumeSectionEnd{}
+\resumeSectionStart{
+  \resumeExperience{Oregon Spice Company}{}{}
+  \resumeSubExperience{IT Specialist}{May 2018 \textemdash{} Jan 2020}Managed IT infrastructure and ERP system projects. Developed reports and pricing analysis for accounting, sales, customer service units. Completed project to migrate 10+ years of company data to new ERP system.
+  \resumeSubExperience{Supplier Quality Specialist}{Oct 2016 \textemdash{} May 2018}Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%.
+  \resumeSubExperience{Technical Documents Coordinator}{Aug 2012 \textemdash Oct 2016}Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\vspace{-6pt}\resumeSectionEnd{}
 \resumeSectionStart{\resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}Development of new food safety programs and readiness audit for SQF certification.}\vspace{-6pt}\resumeSectionEnd{}
 \resumeSectionStart{\resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}Lab analysis and product development of mustards and condiments.}\vspace{-6pt}\resumeSectionEnd{}
 % \resumeSectionStart{\resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}Statistical analysis project of underweight finished products on mozzarella line. Determined which parts of production contributed were the greatest source of variance and presented analysis to senior management.}\vspace{-6pt}\resumeSectionEnd{}
@@ -229,8 +239,8 @@
 \skills{\faGears}{Technical Skills}
 
 \resumeSectionStart{
-  \resumeSkill{Proficient in}{Python, SQL, Data Pipelines, Machine Learning \& Deep Learning, PostgreSQL, SQL Server, SQLite, Git, Excel, JIRA, Regular Expressions, Web Scraping, Technical Writing}
-  \resumeSkill{Familiar with}{Natural Language Processing, SpaCY, NLTK, Time Series Analysis, A/B Testing, Web Design, Information Technology, Accounting, Power BI, ERP Systems, C/C++}
+  \resumeSkill{Proficient in}{Python, SQL, Data Analysis, Machine Learning \& Deep Learning, PostgreSQL, SQL Server, SQLite, Git, Excel, Jira, Regular Expressions, Web Scraping, Project Management, Technical Writing}
+  \resumeSkill{Familiar with}{Natural Language Processing, Data Pipelines, Time Series Analysis, A/B Testing, Web Design, Information Technology, Accounting, Power BI, ERP Systems, C/C++}
 }
 \resumeSectionEnd{}
 
@@ -252,9 +262,10 @@
 \resumeSectionStart{
   % \resumeProject{FoodSafetyExplorer \tag{In Process}}{@ \repo{https://github.com/jonathanhild/foodsafetyexplorer}{github.com/jonathanhild/foodsafetyexplorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
   \resumeProject{VargScore \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{ML model with inference/training pipeline to identify connections in heavy metal music.}
+  \resumeProject{Data Science Notebooks}{@ \repo{https://github.com/jonathanhild/notebooks}{github.com/jonathanhild/notebooks}}{Various Jupyter notebooks summarizing data analysis techniques and machine learning algorithms.}
   \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
   \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
-  \resumeProject{Statistical Analysis of Mozzarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
+  % \resumeProject{Statistical Analysis of Mozzarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
 }
 \resumeSectionEnd{}
 
