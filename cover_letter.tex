@@ -1,0 +1,169 @@
+%-----------------------------------------------------------------------------
+% LaTeX Resume for Data Science
+% Author : Jonathan Hildenbrand
+%-----------------------------------------------------------------------------
+
+\documentclass[letterpaper,12pt]{article}[leftmargin=*]
+
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
+\usepackage{ifxetex}
+\if{xetex}
+  \usepackage[T1]{fontenc}
+  \usepackage[xetex]{hyperref}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[pdftex]{hyperref}
+\fi
+\usepackage{fontawesome}
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+% SETTINGS
+%-----------------------------------------------------------------------------
+% Header settings
+\def\fullname{Jonathan Hildenbrand}
+
+\def\githubicon{\faGithub}
+\def\githublink{https://github.com/jonathanhild}
+\def\githubtext{jonathanhild}
+
+\def\linkedinicon{\faLinkedin}
+\def\linkedinlink{https://linkedin.com/in/jonathanh3}
+\def\linkedintext{jonathanh3}
+
+\def\phoneicon{\faPhone}
+\def\phonetext{+1-971-409-0695}
+
+\def\emailicon{\faEnvelope}
+\def\emaillink{mailto:jonathan.hildenbrand+resume@gmail.com}
+\def\emailtext{jonathan.hildenbrand@gmail.com}
+
+\def\locationicon{\faMapMarker}
+\def\locationtext{Portland, Oregon}
+
+\def\targeticon{\faBinoculars}
+\def\targettext{Local \& Remote}
+
+\def\headertype{\doublecol} % \singlecol or \doublecol
+
+% Misc settings
+\def\entryspacing{-0pt}
+
+\def\bulletstyle{\faAngleRight}
+
+% Define colours
+\definecolor{primary}{HTML}{000000}
+\definecolor{Green}{HTML}{a0d468}
+\definecolor{Red}{HTML}{ed5565}
+\definecolor{Blue}{HTML}{4fc1e9}
+\definecolor{Copper}{HTML}{9d8375}
+\definecolor{accent}{HTML}{666666}
+\definecolor{links}{HTML}{696969}
+\definecolor{subtle}{HTML}{c3c3c3}
+
+% Defines to make listing easier
+\def\location{\hspace{3pt}\locationicon \hspace{5pt}{\color{links}\locationtext}}
+\def\target{\targeticon\hspace{3pt}{\color{links}\targettext}}
+\def\phone{\phoneicon\hspace{3pt}{\color{links}{\phonetext}}}
+\def\linkedin{\linkedinicon\hspace{3pt}\href{\linkedinlink}{\underline{\linkedintext}}}
+\def\email{\emailicon\hspace{3pt}\href{\emaillink}{\underline{\emailtext}}}
+\def\github{\githubicon\hspace{3pt}\href{\githublink}{\underline{\githubtext}}}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.1in}
+
+% Define the link colours
+\hypersetup{
+    colorlinks=true,
+    urlcolor=links,
+}
+
+% Set the margin alignment 
+\raggedbottom{}
+\raggedright{}
+\setlength{\tabcolsep}{0in}
+
+% COMMANDS
+%-----------------------------------------------------------------------------
+% Sections
+
+
+\newcommand{\tag}[1]{%
+  \tikzmarknode[fill=white,fill opacity=0,draw=subtle!60!subtle,thick,rounded corners,inner sep=0.4ex,text height=1.5ex,text depth=.25ex, text opacity=1]{test}{\hspace{1pt}\small{#1}\hspace{1pt}}
+}
+
+% Double column header
+\newcommand{\doublecol}[6]{
+  \begin{tabularx}{\textwidth}{Xr}
+    {
+      \begin{tabular}[c]{l}
+        \fontsize{24}{34}\selectfont{\color{primary}{{\textbf{\fullname}}}}
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l@{\hspace{1.5em}} l}
+        {\small#4} & {\small#1} \\
+        {\small#5} & {\small#2} \\
+        {\small#6} & {\small#3}
+      \end{tabular}
+    }
+  \end{tabularx}
+}
+
+% START DOCUMENT
+%-----------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
+\begin{document}
+\headertype{\github}{\linkedin}{\phone}{\location}{\target}{\email} % Set the order of items here
+
+\vspace{48pt}
+
+Dear Hiring Manager,
+
+\vspace{24pt}
+
+\hspace{24pt}
+% My bio
+I'm looking for a role in data analytics with potential work in machine learning. I have been in a STEM field as a food scientist with numerous projects in improving systems and delivering increased efficiency for food safety and quality. Over the last 10 years, there was an explosion in the amount of data I was working with, and I started learning Python programming and database systems to automate significant portions of my job. I became interested in how far I could push my skills and knowledge in data. I then decided in 2020 make the switch to data science and just completed a Certificate in Data Science from the University of Washington.
+% What is my interest in the job?
+I'm interested in the Maintenance Data Analyst job because it's in the food industry and looks like an opportunity to make a first class system for predictive maintenance.
+
+\vspace{12pt}
+
+\hspace{24pt}
+% What kind of worker I am
+I'm a highly technical, organized, detail-oriented person who delivers quality work on tight timelines. Disruptions and shifting priorities are not foreign to me. In other words it's important to be prepared for the unexpected. I have developed skills to break down projects for better deliverables with continuous iteration. I take consideration in the technical debt that I create and think about the long-term consequences for the company. I also enjoy the creativity and research into making a system that I just the right size to get the job done.
+
+\vspace{12pt}
+
+\hspace{24pt}
+% Describe technical skills relevant to the job posting
+I have over 5 years experience working in SQL and Microsoft Excel. I've built database systems to manage specification versioning. I wrote scripts in Python to convert and migrate 10 years of company data to a new ERP system. Working in IT, I studied infrastructure constraints and did planning to reduce service interruptions and equipment failures with spare parts. I've done similar things with inventory management for a food quality lab. I've worked with simple maintenance management in Dynamics NAV, but consider myself adept at learning more advanced systems.
+% What I'm doing
+I'm currently working on a personal machine learning project to find assiociations in heavy metal bands. The project is made using an end-to-end inference-training pipeline and presented as a website. I've written a web scraper which is currently gathering data from >2 million web pages. I plan to create ML models in natural language understanding of lyrics and network graphs in band members and record labels.
+
+\vspace{12pt}
+
+\hspace{24pt}I look forward to discussing what I can bring to the job and where I can help Interstate Meat Distributors grow. I'm available for interviews at any time and can start immediately. Thank you in advance for your consideration.
+
+\vspace{24pt}
+
+Sincerely,
+
+\vspace{12pt}
+
+Jonathan Hildenbrand
+
+% END DOCUMENT
+%-----------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
+\end{document}
