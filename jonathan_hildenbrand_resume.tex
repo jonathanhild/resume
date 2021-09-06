@@ -49,6 +49,7 @@
 
 \def\targeticon{\faBinoculars}
 \def\targettext{Local \& Remote}
+% \def\targettext{Local, Remote \& Relocation}
 
 \def\headertype{\doublecol} % \singlecol or \doublecol
 
@@ -129,11 +130,12 @@
 
 % Entry for projects: title and link
 \newcommand{\resumeProject}[3]{
-  \vspace{-6pt}\item[]
+  \item[]
     \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}} r}
       \textbf{\color{primary}#1} & {\color{accent}\small#2} \\
     \end{tabularx}
     {#3}
+    \vspace{-6pt}
 }
 
 % Entry for skills: heading, attributes
@@ -148,12 +150,12 @@
 
 % Entry for job experience: title, subheading, dates, description
 \newcommand{\resumeExperience}[3]{
-  \vspace{-6pt}
   \item[]
     \begin{tabularx}{0.97\textwidth}{>{\raggedright}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
       \textbf{\color{primary}#1} & \textit{\color{accent}#2} & \textit{\color{accent}\small#3} \\
   \end{tabularx}
-    
+   \vspace{-6pt}
+   
 }
 
 \newcommand{\resumeSubExperience}[2]{
@@ -164,11 +166,11 @@
 
 % Entry for education: school, program, dates
 \newcommand{\resumeEducation}[3]{
-  \vspace{-6pt}
   \item[]
     \begin{tabularx}{0.97\textwidth}[t]{>{\raggedright}X >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
       \textbf{\color{primary}#1} & {\small#2} & \textit{\color{accent}\small#3} \\
     \end{tabularx}
+    \vspace{-6pt}
 }
 
 \newcommand{\tag}[1]{%
@@ -225,7 +227,7 @@
 
 \resumeSectionStart{
   \resumeExperience{Oregon Spice Company}{}{}
-  \resumeSubExperience{IT Specialist/Business Analyst}{May 2018 \textemdash{} Jan 2020}Managed IT infrastructure and ERP system projects. Developed reports and pricing analysis for accounting, sales, customer service units. Completed project to migrate 10+ years of company data to new ERP system.
+  \resumeSubExperience{IT Specialist/Business Analyst}{May 2018 \textemdash{} Jan 2020}Managed IT infrastructure and ERP system projects. Improved server and network architechture for increased uptime. Developed reports and pricing analysis for accounting, sales, customer service units. Assisted in implementation of new ERP system.
   \resumeSubExperience{Supplier Quality Specialist}{Oct 2016 \textemdash{} May 2018}Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%.
   \resumeSubExperience{Technical Documents Coordinator}{Aug 2012 \textemdash Oct 2016}Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\vspace{-6pt}\resumeSectionEnd{}
 \resumeSectionStart{\resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}Development of new food safety programs and readiness audit for SQF certification.}\vspace{-6pt}\resumeSectionEnd{}
@@ -239,8 +241,8 @@
 \skills{\faGears}{Technical Skills}
 
 \resumeSectionStart{
-  \resumeSkill{Proficient in}{Python, Data Analysis, Machine Learning \& Deep Learning, Scikit-Learn, Tensorflow, SQL, Microsoft SQL Server, SSMS, SSRS, PostgreSQL, SQLite, Git, Excel, Regular Expressions, Web Scraping, Jira, Technical Writing, Windows Servers, Linux Servers}
-  \resumeSkill{Familiar with}{Natural Language Processing, Data Pipelines, Time Series Analysis, A/B Testing, Tableau, Power BI, ERP Systems, HTML/CSS/JS, Bash, LaTex, C/C++}
+  \resumeSkill{Proficient in}{Python, Scikit-Learn, Tensorflow, Pandas, Numpy, SQLAlchemy, SQL, Microsoft SQL Server, PostgreSQL, SQLite, Git, Regular Expressions, Web Scraping, Jira, Technical Writing, Windows Servers, Linux Servers}
+  \resumeSkill{Familiar with}{Natural Language Processing, Data Pipelines, Time Series Analysis, A/B Testing, Google APIs, Tableau, Power BI, ERP Systems, HTML/CSS/JS, Bash, LaTex, C/C++}
 }
 \resumeSectionEnd{}
 
@@ -251,7 +253,7 @@
 \resumeSectionStart{
   \resumeEducation{University of Washington}{Certificate in Data Science}{Oct 2020 \textemdash{} Jun 2021}
   \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{Jan 2015 \textemdash{} Jun 2015}
-  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{May 2003 \textemdash{} May 2007}
+  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{Sep 2003 \textemdash{} May 2007}
 }
 \resumeSectionEnd{}
 
@@ -261,6 +263,7 @@
 
 \resumeSectionStart{
   % \resumeProject{FoodSafetyExplorer \tag{In Process}}{@ \repo{https://github.com/jonathanhild/foodsafetyexplorer}{github.com/jonathanhild/foodsafetyexplorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
+  \resumeProject{DarkLogoGAN \tag{In Process}}{@ \repo{https://github.com/jonathanhild/DarkLogoGAN}{github.com/jonathanhild/DarkLogoGAN}}{Generative adversarial network model using 80-90K death metal and black metal band logos.}
   \resumeProject{VargScore \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{ML model with inference/training pipeline to identify connections in heavy metal music.}
   \resumeProject{Data Science Notebooks}{@ \repo{https://github.com/jonathanhild/notebooks}{github.com/jonathanhild/notebooks}}{Various Jupyter notebooks summarizing data analysis techniques and machine learning algorithms.}
   \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
