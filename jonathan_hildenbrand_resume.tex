@@ -140,11 +140,12 @@
 
 % Entry for skills: heading, attributes
 \newcommand{\resumeSkill}[2]{
-  \vspace{-6pt}
   \item[]
     \begin{tabularx}{0.97\textwidth}{>{\hsize=.2\hsize}X X }
       {\textbf{#1}} & {\small#2} \\
-    \end{tabularx}
+    \end{tabularx}  
+    \vspace{-6pt}
+
 }
 
 
@@ -227,11 +228,11 @@
 
 \resumeSectionStart{
   \resumeExperience{Oregon Spice Company}{}{}
-  \resumeSubExperience{IT Specialist/Business Analyst}{May 2018 \textemdash{} Jan 2020}Managed IT infrastructure and ERP system projects. Improved server and network architechture for increased uptime. Developed reports and pricing analysis for accounting, sales, customer service units. Assisted in implementation of new ERP system.
-  \resumeSubExperience{Supplier Quality Specialist}{Oct 2016 \textemdash{} May 2018}Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%.
-  \resumeSubExperience{Technical Documents Coordinator}{Aug 2012 \textemdash Oct 2016}Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\vspace{-6pt}\resumeSectionEnd{}
+  \resumeSubExperience{IT Specialist/Business Analyst}{May 2018 \textemdash{} Jan 2020}ETL project with SQL and Python scripts to clean/transform 10+ years of company data for new ERP system. Improved server, database, and network architecture for increased uptime. Developed reports in SSRS and Jet Reports for accounting, sales, and customer service groups.
+  \resumeSubExperience{Supplier Quality Specialist}{Oct 2016 \textemdash{} May 2018}Created supplier approval program from ground-up. Responsible for supplier risk assessments and communication of requirements with improved compliance from zero to 90\%. Customized supplier management system with SQL scripts.
+  \resumeSubExperience{Technical Documents Coordinator}{Aug 2012 \textemdash{} Oct 2016}Daily writing SQL queries for reports in Excel. Development of database in Access for specification management. Communication of food safety and quality matters, and composing technical information to customers. Reorganized documentation system and reduced response turn-around-time by half.}\resumeSectionEnd{}
 \resumeSectionStart{\resumeExperience{Sunshine Dairy Foods}{QA Projects Leader}{Aug 2010 \textemdash{} Oct 2011}Development of new food safety programs and readiness audit for SQF certification.}\vspace{-6pt}\resumeSectionEnd{}
-\resumeSectionStart{\resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}Lab analysis and product development of mustards and condiments.}\vspace{-6pt}\resumeSectionEnd{}
+\resumeSectionStart{\resumeExperience{Beaverton Foods}{QA/R\&D Technician}{Apr 2008 \textemdash{} Aug 2010}Lab analysis and product development of mustards and condiments.}\resumeSectionEnd{}
 % \resumeSectionStart{\resumeExperience{Lactalis American Group}{Quality Intern}{May 2006 \textemdash{} Aug 2006}Statistical analysis project of underweight finished products on mozzarella line. Determined which parts of production contributed were the greatest source of variance and presented analysis to senior management.}\vspace{-6pt}\resumeSectionEnd{}
 % \resumeSectionStart{\resumeExperience{University of Idaho}{Laboratory Assistant}{May 2005 \textemdash{} May 2006}Research project in size exclusion chromatography of carbohydrate chain fractions in teff grain.}\vspace{-6pt}\resumeSectionEnd{}
 
@@ -241,8 +242,9 @@
 \skills{\faGears}{Technical Skills}
 
 \resumeSectionStart{
-  \resumeSkill{Proficient in}{Python, Scikit-Learn, Tensorflow, Pandas, Numpy, SQLAlchemy, SQL, Microsoft SQL Server, PostgreSQL, SQLite, Git, Regular Expressions, Web Scraping, Jira, Technical Writing, Windows Servers, Linux Servers}
-  \resumeSkill{Familiar with}{Natural Language Processing, Data Pipelines, Time Series Analysis, A/B Testing, Google APIs, Tableau, Power BI, ERP Systems, HTML/CSS/JS, Bash, LaTex, C/C++}
+  \resumeSkill{Python}{Scikit-Learn, Tensorflow/Keras, Pandas, Numpy, JupyterLab, Anaconda/Miniconda, Matplotlib, Seaborn, SQLAlchemy, Pillow, Flask}
+  \resumeSkill{Proficient in}{Data Analysis \& Machine Learning, SQL, Microsoft SQL Server, PostgreSQL, SQLite, Microsoft Excel, Git, Regular Expressions, Web Scraping, Tableau, Jira, Technical Writing}
+  \resumeSkill{Familiar with}{Data Pipelines, Computer Vision, Power BI, Web Development, ERP Systems, Information Technology, Windows Servers, Linux Servers, Accounting, Bash, LaTex}
 }
 \resumeSectionEnd{}
 
@@ -262,11 +264,12 @@
 \projects{\faFlask}{Notable Projects}
 
 \resumeSectionStart{
+  % \resumeProject{Tableau Portfolio}{@ \repo{https://public.tableau.com/app/profile/jonathanhild}{Tableau Public}}{ \tag{In Process} Analytics dashboards and stories on coal terminal maintenance, Blazers player statistics, and City of Portland geographic data.}
   % \resumeProject{FoodSafetyExplorer \tag{In Process}}{@ \repo{https://github.com/jonathanhild/foodsafetyexplorer}{github.com/jonathanhild/foodsafetyexplorer}}{Combine multiple FDA data sources into dashboard for exploration of emerging food safety risks.}
-  \resumeProject{DarkLogoGAN \tag{In Process}}{@ \repo{https://github.com/jonathanhild/DarkLogoGAN}{github.com/jonathanhild/DarkLogoGAN}}{Generative adversarial network model using 80-90K death metal and black metal band logos.}
-  \resumeProject{VargScore \tag{In Process}}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{ML model with inference/training pipeline to identify connections in heavy metal music.}
+  \resumeProject{DarkLogoGAN}{@ \repo{https://github.com/jonathanhild/DarkLogoGAN}{github.com/jonathanhild/DarkLogoGAN}}{\tag{In Process}Generative adversarial network model using 80-90K death metal and black metal band logos.}
+  % \resumeProject{VargScore}{@ \repo{https://github.com/jonathanhild/vargscore}{github.com/jonathanhild/vargscore}}{ \tag{In Process}ML model with inference/training pipeline to identify connections in heavy metal music. Data management in PostgreSQL database with SQLAlchemy ORM.}
   \resumeProject{Data Science Notebooks}{@ \repo{https://github.com/jonathanhild/notebooks}{github.com/jonathanhild/notebooks}}{Various Jupyter notebooks summarizing data analysis techniques and machine learning algorithms.}
-  \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
+  % \resumeProject{ETL \& SKU Generator}{@ Oregon Spice Company}{ETL using SQL queries and Python scripting for conversion of 10+ years company data for new ERP system. Produced model and scripting to generate 600+ item SKUs using raw material densities.}
   \resumeProject{Traceability System in SQL}{@ Oregon Spice Company}{SQL scripts connected to ERP system to run traceability exercises. Improved traceability completion time by 16x and personnel by 3x.}
   % \resumeProject{Statistical Analysis of Mozzarella Line}{@ Lactalis American Group}{ANOVA statistical model to find sources of underweight finished products in mozzarella line. Created 1.5 year dataset; presented results and guidance to plant operations team.}
 }
