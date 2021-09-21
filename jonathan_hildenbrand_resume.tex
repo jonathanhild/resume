@@ -97,19 +97,20 @@
 % COMMANDS
 %-----------------------------------------------------------------------------
 % Sections
-\newcommand{\projects}[2]{\vspace{4pt}
-  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
-}
-\newcommand{\skills}[2]{\vspace{4pt}
-  \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
-}
-
-\newcommand{\experience}[2]{\vspace{4pt}
+\newcommand{\education}[2]{\vspace{4pt}
   \colorbox{Red}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
-\newcommand{\education}[2]{\vspace{4pt}
+\newcommand{\experience}[2]{\vspace{4pt}
+  \colorbox{Green}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+}
+
+\newcommand{\skills}[2]{\vspace{4pt}
   \colorbox{Blue}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
+}
+
+\newcommand{\projects}[2]{\vspace{4pt}
+  \colorbox{Copper}{\color{white}#1\hspace{9pt}\raggedbottom\normalsize\textbf{#2\hspace{4pt}}}
 }
 
 % Entry start and end, for spacing
@@ -222,6 +223,16 @@
 \begin{document}
 \headertype{\github}{\linkedin}{\phone}{\location}{\target}{\email} % Set the order of items here
 
+% EDUCATION
+%-----------------------------------------------------------------------------
+\education{\faGraduationCap}{Education \& Certifications}
+\resumeSectionStart{
+  \resumeEducation{University of Washington}{Certificate in Data Science}{Oct 2020 \textemdash{} Jun 2021}
+  % \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{Jan 2015 \textemdash{} Jun 2015}
+  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{Sep 2003 \textemdash{} May 2007}
+}
+\resumeSectionEnd{}
+
 % EXPERIENCE
 %-----------------------------------------------------------------------------
 \experience{\faPieChart}{Work Experience}
@@ -245,17 +256,6 @@
   \resumeSkill{Python}{Scikit-Learn, Tensorflow, Pandas, Numpy, JupyterLab, Anaconda/Miniconda, Matplotlib, Seaborn, SQLAlchemy, Pillow, Flask}
   \resumeSkill{Proficient in}{Data Analysis, Machine Learning \& Deep Learning, SQL, PostgreSQL, SQLite, Microsoft SQL Server, Microsoft Excel, Git, Regular Expressions, Web Scraping, Jira, Technical Writing, Windows Servers, Linux Servers, Bash, LaTex}
   \resumeSkill{Familiar with}{Convolutional Neural Networks, Generative Adversarial Networks, Autoencoders, Data Pipelines, Web Development, Tableau, Power BI, ERP Systems, IT, Accounting}
-}
-\resumeSectionEnd{}
-
-
-% EDUCATION
-%-----------------------------------------------------------------------------
-\education{\faGraduationCap}{Education \& Certifications}
-\resumeSectionStart{
-  \resumeEducation{University of Washington}{Certificate in Data Science}{Oct 2020 \textemdash{} Jun 2021}
-  % \resumeEducation{Portland Community College}{Courses in Computer Science I/II}{Jan 2015 \textemdash{} Jun 2015}
-  \resumeEducation{University of Idaho}{BSFS in Food Science \& Toxicology}{Sep 2003 \textemdash{} May 2007}
 }
 \resumeSectionEnd{}
 
